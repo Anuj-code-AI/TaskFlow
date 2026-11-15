@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workspace — TaskFlow</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="application-page">
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/"><span class="brand-mark">T</span><span>TaskFlow</span></a>
+      <div class="sidebar-label">WORKSPACES</div>
+      <div id="workspace-list" class="workspace-list"></div>
+      <button id="new-workspace" class="sidebar-action">＋ New workspace</button>
+      <div class="sidebar-bottom">
+        <button id="invitations-button" class="nav-item">✉ Invitations <span id="invitation-count" class="count">0</span></button>
+        <button id="notifications-button" class="nav-item">◉ Notifications <span id="unread-count" class="count">0</span></button>
+        <button id="logout-button" class="nav-item">↪ Sign out</button>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">TEAM WORKSPACE</p><h1 id="page-title">Your workspaces</h1></div>
+        <div class="top-actions"><span id="user-label" class="user-label"></span><button id="add-project" class="button button-primary hidden">＋ New project</button></div>
+      </header>
+      <section id="content-view" class="content">
+        <div id="toolbar" class="toolbar"></div>
+        <div id="content"></div>
+      </section>
+    </main>
+  </div>
+  <dialog id="modal">
+    <form method="dialog" class="modal-card" id="modal-form">
+      <div class="modal-head"><h2 id="modal-title">Create</h2><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+      <div id="modal-fields"></div>
+      <div class="modal-actions"><button class="button button-outline" value="cancel">Cancel</button><button class="button button-primary" id="modal-submit" value="save">Save</button></div>
+    </form>
+  </dialog>
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>
