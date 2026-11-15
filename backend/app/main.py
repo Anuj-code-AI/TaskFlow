@@ -129,7 +129,7 @@ app.add_middleware(
 _rate_fallback = defaultdict(list)
 _RATE_RULES = {
     "/api/v1/auth/login": (10, 60),
-    "/api/v1/auth/register": (5, 3600),
+    "/api/v1/auth/register": (5, 60),
     "/api/v1/auth/refresh": (20, 60),
     "/api/v1/workspaces": (30, 60),
 }
